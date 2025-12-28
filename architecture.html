@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Architecture - CAIL</title>
+    <meta name="description" content="Technical architecture and system flow of CAIL">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-text">CAIL</span>
+                    <span class="logo-subtitle">Campus Academic Intelligence</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faculty.html">Faculty Portal</a></li>
+                    <li><a href="student.html">Student Portal</a></li>
+                    <li><a href="architecture.html" class="active">System Flow</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="team-badge">Team: ZERO_IQ</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>System Architecture & Flow</h1>
+            <p>How CAIL ensures verified, curriculum-aligned academic intelligence</p>
+        </div>
+    </section>
+
+    <!-- System Flow Diagram -->
+    <section class="flow-diagram-section">
+        <div class="container">
+            <h2 class="section-title">End-to-End System Flow</h2>
+
+            <div class="flow-container">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-card">
+                        <div class="step-icon">👨‍🏫</div>
+                        <h3>Faculty Upload</h3>
+                        <p>Faculty members upload course materials (PDF, PPT, Notes) through the secure portal</p>
+                        <div class="step-label verified-label">Verified Content Only</div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-card">
+                        <div class="step-icon">🗄️</div>
+                        <h3>Knowledge Base</h3>
+                        <p>Content is processed, indexed, and stored in the institutional knowledge repository</p>
+                        <div class="step-label secure-label">No Open Internet Data</div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-card">
+                        <div class="step-icon">🔍</div>
+                        <h3>AI Retrieval</h3>
+                        <p>Student queries trigger intelligent search across verified academic content only</p>
+                        <div class="step-label ai-label">Vertex AI Processing</div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-card">
+                        <div class="step-icon">👨‍🎓</div>
+                        <h3>Student Response</h3>
+                        <p>Accurate, curriculum-aligned answers delivered to students in real-time</p>
+                        <div class="step-label instant-label">Instant 24/7 Access</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Architecture -->
+    <section class="tech-architecture-section">
+        <div class="container">
+            <h2 class="section-title">Technical Architecture</h2>
+
+            <div class="architecture-grid">
+                <div class="architecture-layer">
+                    <h3>Presentation Layer</h3>
+                    <div class="layer-components">
+                        <div class="component-box">Faculty Portal</div>
+                        <div class="component-box">Student Portal</div>
+                        <div class="component-box">Admin Dashboard</div>
+                    </div>
+                </div>
+
+                <div class="architecture-layer">
+                    <h3>Application Layer</h3>
+                    <div class="layer-components">
+                        <div class="component-box">Query Processing Engine</div>
+                        <div class="component-box">Content Verification Module</div>
+                        <div class="component-box">Learning Analytics</div>
+                    </div>
+                </div>
+
+                <div class="architecture-layer">
+                    <h3>Intelligence Layer</h3>
+                    <div class="layer-components">
+                        <div class="component-box">Vertex AI NLP</div>
+                        <div class="component-box">Semantic Search</div>
+                        <div class="component-box">RAG Pipeline</div>
+                    </div>
+                </div>
+
+                <div class="architecture-layer">
+                    <h3>Data Layer</h3>
+                    <div class="layer-components">
+                        <div class="component-box">Firebase Firestore</div>
+                        <div class="component-box">Google Drive Storage</div>
+                        <div class="component-box">Vector Database</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Principles -->
+    <section class="principles-section">
+        <div class="container">
+            <h2 class="section-title">Core Architectural Principles</h2>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <div class="principle-icon verified-bg">✓</div>
+                    <h3>Verified Content Only</h3>
+                    <p>
+                        Every piece of information in CAIL originates from faculty-uploaded and verified academic
+                        materials.
+                        No external or unverified sources are used.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon secure-bg">🔒</div>
+                    <h3>No Open Internet Data</h3>
+                    <p>
+                        CAIL operates as a closed, institutional system. It does not access or reference
+                        open internet sources, ensuring complete academic integrity.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon control-bg">⚙️</div>
+                    <h3>Institutional Control</h3>
+                    <p>
+                        Full data sovereignty and control remain with the institution. Faculty and administrators
+                        control what content enters the knowledge base.
+                    </p>
+                </div>
+
+                <div class="principle-card">
+                    <div class="principle-icon continuity-bg">🔄</div>
+                    <h3>Learning Continuity</h3>
+                    <p>
+                        Automated summaries and intelligent recommendations ensure students maintain learning
+                        momentum even when they miss classes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RAG Concept Explanation -->
+    <section class="rag-concept-section">
+        <div class="container">
+            <h2 class="section-title">Retrieval-Augmented Generation (RAG)</h2>
+            <div class="rag-explanation">
+                <div class="rag-content">
+                    <h3>How CAIL Generates Accurate Responses</h3>
+                    <p>
+                        CAIL uses a Retrieval-Augmented Generation approach to ensure responses are grounded
+                        in verified academic content:
+                    </p>
+
+                    <div class="rag-steps">
+                        <div class="rag-step">
+                            <div class="rag-step-number">1</div>
+                            <div class="rag-step-content">
+                                <h4>Query Analysis</h4>
+                                <p>Student question is analyzed to identify key academic concepts and context</p>
+                            </div>
+                        </div>
+                        <div class="rag-step">
+                            <div class="rag-step-number">2</div>
+                            <div class="rag-step-content">
+                                <h4>Content Retrieval</h4>
+                                <p>Relevant sections from faculty-verified materials are retrieved from the knowledge
+                                    base</p>
+                            </div>
+                        </div>
+                        <div class="rag-step">
+                            <div class="rag-step-number">3</div>
+                            <div class="rag-step-content">
+                                <h4>Response Generation</h4>
+                                <p>AI generates a clear, accurate answer using ONLY the retrieved verified content</p>
+                            </div>
+                        </div>
+                        <div class="rag-step">
+                            <div class="rag-step-number">4</div>
+                            <div class="rag-step-content">
+                                <h4>Source Attribution</h4>
+                                <p>Response includes references to the original faculty materials used</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-note-box">
+                        <h4>Demo Implementation</h4>
+                        <p>
+                            For this hackathon MVP, the RAG pipeline is mocked using predefined question-answer pairs.
+                            In production, this would connect to Vertex AI and a vector database for real-time
+                            retrieval.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Ecosystem Integration -->
+    <section class="ecosystem-section">
+        <div class="container">
+            <h2 class="section-title">Google Ecosystem Integration</h2>
+
+            <div class="ecosystem-grid">
+                <div class="ecosystem-card">
+                    <div class="ecosystem-header">
+                        <div class="ecosystem-icon">GCP</div>
+                        <h3>Google Cloud Platform</h3>
+                    </div>
+                    <ul class="ecosystem-features">
+                        <li>Cloud Run for scalable application hosting</li>
+                        <li>Cloud Storage for document management</li>
+                        <li>Cloud Functions for serverless processing</li>
+                        <li>IAM for secure access control</li>
+                    </ul>
+                </div>
+
+                <div class="ecosystem-card">
+                    <div class="ecosystem-header">
+                        <div class="ecosystem-icon">FB</div>
+                        <h3>Firebase</h3>
+                    </div>
+                    <ul class="ecosystem-features">
+                        <li>Firestore for real-time data synchronization</li>
+                        <li>Authentication for user management</li>
+                        <li>Hosting for static frontend deployment</li>
+                        <li>Cloud Functions for backend logic</li>
+                    </ul>
+                </div>
+
+                <div class="ecosystem-card">
+                    <div class="ecosystem-header">
+                        <div class="ecosystem-icon">AI</div>
+                        <h3>Vertex AI</h3>
+                    </div>
+                    <ul class="ecosystem-features">
+                        <li>Natural Language Processing</li>
+                        <li>Semantic search capabilities</li>
+                        <li>Document embedding generation</li>
+                        <li>Custom model training and deployment</li>
+                    </ul>
+                </div>
+
+                <div class="ecosystem-card">
+                    <div class="ecosystem-header">
+                        <div class="ecosystem-icon">GD</div>
+                        <h3>Google Drive API</h3>
+                    </div>
+                    <ul class="ecosystem-features">
+                        <li>Secure document storage</li>
+                        <li>Version control for academic materials</li>
+                        <li>Granular access permissions</li>
+                        <li>Automated backup and recovery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>CAIL</h3>
+                    <p>Campus Academic Intelligence Layer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="faculty.html">Faculty Portal</a>
+                    <a href="student.html">Student Portal</a>
+                    <a href="architecture.html">System Flow</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 CAIL Project</p>
+                    <p class="team-info">Team ZERO_IQ - Codespire 3.0</p>
+                    <p class="members-info">Priyanshu Sharma • Ishan Raut • Lavnesh Nariya</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

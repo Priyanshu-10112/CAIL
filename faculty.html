@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Portal - CAIL</title>
+    <meta name="description" content="Faculty portal for managing and uploading verified academic content">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-text">CAIL</span>
+                    <span class="logo-subtitle">Campus Academic Intelligence</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faculty.html" class="active">Faculty Portal</a></li>
+                    <li><a href="student.html">Student Portal</a></li>
+                    <li><a href="architecture.html">System Flow</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="team-badge">Team: ZERO_IQ</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Faculty Portal</h1>
+            <p>Manage and upload verified academic content to build institutional knowledge</p>
+        </div>
+    </section>
+
+    <!-- Faculty Login Section (Mocked) -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-card" id="loginCard">
+                <h2>Faculty Authentication</h2>
+                <p class="login-subtitle">Secure access for authorized faculty members</p>
+                <form class="login-form" id="facultyLoginForm">
+                    <div class="form-group">
+                        <label for="facultyId">Faculty ID</label>
+                        <input type="text" id="facultyId" placeholder="Enter your faculty ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="facultyPassword">Password</label>
+                        <input type="password" id="facultyPassword" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login to Portal</button>
+                </form>
+                <p class="demo-note">Demo Mode: Use any credentials to access</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Dashboard (Hidden by default, shown after login) -->
+    <div id="facultyDashboard" style="display: none;">
+
+        <!-- Welcome Banner -->
+        <section class="welcome-banner">
+            <div class="container">
+                <div class="welcome-content">
+                    <h2>Welcome, <span id="facultyName">Dr. Faculty</span></h2>
+                    <p>Manage your course materials and monitor student knowledge gaps</p>
+                </div>
+                <button class="btn btn-outline-small" onclick="logout()">Logout</button>
+            </div>
+        </section>
+
+        <!-- Content Upload Section -->
+        <section class="upload-section">
+            <div class="container">
+                <h2 class="section-title">Faculty Verified Content Upload (Demo)</h2>
+                <p class="section-description">Upload course materials to build the CAIL knowledge base</p>
+
+                <div class="upload-area-container">
+                    <div class="upload-box" id="uploadBox">
+                        <div class="upload-icon-large">📄</div>
+                        <h3>Drag & Drop Files Here</h3>
+                        <p>or click to browse</p>
+                        <p class="upload-formats">Supported: PDF, PPT, PPTX, DOC, DOCX, TXT</p>
+                        <input type="file" id="fileInput" class="file-input" accept=".pdf,.ppt,.pptx,.doc,.docx,.txt"
+                            multiple>
+                        <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                            Select Files to Upload
+                        </button>
+                    </div>
+
+                    <div class="upload-success" id="uploadSuccess" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Content Verified and Indexed</h3>
+                        <p>Your academic material has been successfully added to the CAIL Knowledge Base</p>
+                        <div class="uploaded-file-info" id="uploadedFileInfo"></div>
+                        <button class="btn btn-secondary" onclick="resetUpload()">Upload Another File</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Faculty Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">⏱️</div>
+                        <h3>Reduced Repetitive Queries</h3>
+                        <p>Students get instant answers to common curriculum questions, freeing up your time for more
+                            meaningful academic interactions</p>
+                        <div class="benefit-stat">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-label">Reduction in repetitive questions</span>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">📚</div>
+                        <h3>Centralized Academic Knowledge</h3>
+                        <p>All course materials in one verified repository, ensuring students access only approved and
+                            current information</p>
+                        <div class="benefit-stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Content verification accuracy</span>
+                        </div>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🔄</div>
+                        <h3>Academic Continuity Ensured</h3>
+                        <p>Automated lecture summaries help students who miss classes stay on track without requiring
+                            additional faculty time</p>
+                        <div class="benefit-stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Student support availability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Uploaded Content Management -->
+        <section class="content-management-section">
+            <div class="container">
+                <h2 class="section-title">Your Uploaded Content</h2>
+                <div class="content-table">
+                    <table class="academic-table">
+                        <thead>
+                            <tr>
+                                <th>Content Name</th>
+                                <th>Type</th>
+                                <th>Upload Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="contentTableBody">
+                            <tr>
+                                <td>Data Structures - Module 1</td>
+                                <td>PDF</td>
+                                <td>2025-01-15</td>
+                                <td><span class="status-badge status-verified">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Binary Search Trees - Lecture Notes</td>
+                                <td>PPT</td>
+                                <td>2025-01-20</td>
+                                <td><span class="status-badge status-verified">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>Database Normalization - Examples</td>
+                                <td>DOC</td>
+                                <td>2025-01-22</td>
+                                <td><span class="status-badge status-verified">Verified</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>CAIL</h3>
+                    <p>Campus Academic Intelligence Layer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="faculty.html">Faculty Portal</a>
+                    <a href="student.html">Student Portal</a>
+                    <a href="architecture.html">System Flow</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 CAIL Project</p>
+                    <p class="team-info">Team ZERO_IQ - Codespire 3.0</p>
+                    <p class="members-info">Priyanshu Sharma • Ishan Raut • Lavnesh Nariya</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/faculty.js"></script>
+</body>
+
+</html>

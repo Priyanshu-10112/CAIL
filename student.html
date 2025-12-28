@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - CAIL</title>
+    <meta name="description" content="Student portal for academic queries and learning continuity">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-text">CAIL</span>
+                    <span class="logo-subtitle">Campus Academic Intelligence</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="faculty.html">Faculty Portal</a></li>
+                    <li><a href="student.html" class="active">Student Portal</a></li>
+                    <li><a href="architecture.html">System Flow</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="team-badge">Team: ZERO_IQ</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Student Portal</h1>
+            <p>Get instant answers from verified academic content</p>
+        </div>
+    </section>
+
+    <!-- Academic Query Interface -->
+    <section class="query-interface-section">
+        <div class="container">
+            <div class="query-info-banner">
+                <div class="info-icon">✓</div>
+                <p>All responses generated from <strong>faculty-approved materials only</strong></p>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-window">
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Welcome Message -->
+                        <div class="message-wrapper welcome-msg">
+                            <div class="message-content">
+                                <h3>Welcome to CAIL Academic Assistant</h3>
+                                <p>Ask any curriculum-related question. All answers are derived from verified faculty
+                                    content.</p>
+                                <div class="example-queries">
+                                    <p class="example-label">Try these example questions:</p>
+                                    <button class="example-query-btn" onclick="askExampleQuestion(0)">
+                                        Explain Binary Search Trees with examples
+                                    </button>
+                                    <button class="example-query-btn" onclick="askExampleQuestion(1)">
+                                        What is Newton's Second Law of Motion?
+                                    </button>
+                                    <button class="example-query-btn" onclick="askExampleQuestion(2)">
+                                        Define Normalization in Database Management
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <input type="text" id="studentQueryInput" class="chat-input"
+                            placeholder="Ask syllabus-related academic question…"
+                            onkeypress="handleQueryKeyPress(event)">
+                        <button class="send-btn" id="sendQueryBtn" onclick="submitStudentQuery()">
+                            <span>Send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Continuity Section -->
+    <section class="continuity-section">
+        <div class="container">
+            <h2 class="section-title">Learning Continuity Mode</h2>
+
+            <div class="continuity-card-container" id="continuityCardContainer">
+                <div class="continuity-card">
+                    <div class="continuity-header">
+                        <div class="continuity-icon-large">📖</div>
+                        <h3>Missed Today's Lecture?</h3>
+                    </div>
+                    <p class="continuity-description">
+                        Stay on track with AI-generated summaries and personalized next steps based on faculty-approved
+                        materials
+                    </p>
+                    <button class="btn btn-primary" onclick="showLectureSummary()">
+                        Get Summary & Next Steps
+                    </button>
+                </div>
+            </div>
+
+            <div class="continuity-result-container" id="continuityResult" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header">
+                        <h3>Lecture Summary - Data Structures (Jan 25, 2025)</h3>
+                        <button class="close-btn" onclick="hideLectureSummary()">✕</button>
+                    </div>
+
+                    <div class="result-section">
+                        <div class="section-icon">📝</div>
+                        <h4>Lecture Summary</h4>
+                        <p>
+                            Today's Data Structures lecture covered <strong>Binary Search Trees (BST)</strong>.
+                            Key topics included:
+                        </p>
+                        <ul>
+                            <li>BST properties: left child < parent < right child</li>
+                            <li>Insertion algorithms (recursive and iterative approaches)</li>
+                            <li>Time complexity analysis: O(log n) for balanced trees</li>
+                            <li>Practical demonstrations of tree traversal methods</li>
+                        </ul>
+                    </div>
+
+                    <div class="result-section">
+                        <div class="section-icon">📌</div>
+                        <h4>Suggested Revision Topic</h4>
+                        <p>
+                            Review <strong>AVL Trees and self-balancing mechanisms</strong> to build upon today's BST
+                            foundation.
+                            Understanding rotation operations will help you grasp advanced tree structures.
+                        </p>
+                    </div>
+
+                    <div class="result-section">
+                        <div class="section-icon">✏️</div>
+                        <h4>Practice Task</h4>
+                        <p>
+                            <strong>Assignment:</strong> Implement a BST insertion function in your preferred
+                            programming language.
+                            Include proper error handling and test with at least 5 different inputs.
+                        </p>
+                        <p class="deadline-info">
+                            Submit via the course portal by next lecture (Jan 27, 2025)
+                        </p>
+                    </div>
+
+                    <button class="btn btn-secondary" onclick="hideLectureSummary()">Back to Portal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Quick Access Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Course Materials</h3>
+                    <p>Access all faculty-verified lecture notes and resources</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">📊</div>
+                    <h3>Progress Tracker</h3>
+                    <p>Monitor your learning progress across all subjects</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">💬</div>
+                    <h3>Query History</h3>
+                    <p>Review your previous questions and answers</p>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">🎯</div>
+                    <h3>Practice Tests</h3>
+                    <p>Test your knowledge with curriculum-aligned quizzes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>CAIL</h3>
+                    <p>Campus Academic Intelligence Layer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="faculty.html">Faculty Portal</a>
+                    <a href="student.html">Student Portal</a>
+                    <a href="architecture.html">System Flow</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 CAIL Project</p>
+                    <p class="team-info">Team ZERO_IQ - Codespire 3.0</p>
+                    <p class="members-info">Priyanshu Sharma • Ishan Raut • Lavnesh Nariya</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/student.js"></script>
+</body>
+
+</html>
