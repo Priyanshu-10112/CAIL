@@ -13,6 +13,13 @@
 </head>
 
 <body>
+    <!-- Demo Preview Label -->
+    <div class="demo-preview-banner">
+        <div class="container">
+            <p>Frontend MVP – Hackathon Prototype</p>
+        </div>
+    </div>
+
     <!-- Navigation Header -->
     <header class="main-header">
         <div class="container">
@@ -25,7 +32,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="faculty.html">Faculty Portal</a></li>
                     <li><a href="student.html" class="active">Student Portal</a></li>
-                    <li><a href="architecture.html">System Flow</a></li>
+                    <li><a href="architecture.html">Architecture</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
                 <div class="team-badge">Team: ZERO_IQ</div>
@@ -83,6 +90,18 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- Sample Response Section -->
+                <div class="sample-response-section">
+                    <h3>Sample Response</h3>
+                    <div class="sample-response-card">
+                        <p><strong>Question:</strong> Explain Binary Search Trees with examples</p>
+                        <p><strong>Answer:</strong> A Binary Search Tree (BST) is a hierarchical data structure where each node has at most two children (left and right). The key property is that for any node, all values in the left subtree are less than the node's value, and all values in the right subtree are greater.</p>
+                        <div class="source-attribution">
+                            ✓ Source: Data Structures – Module 1 (Faculty Verified ✓)
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -107,55 +126,6 @@
                     </button>
                 </div>
             </div>
-
-            <div class="continuity-result-container" id="continuityResult" style="display: none;">
-                <div class="result-card">
-                    <div class="result-header">
-                        <h3>Lecture Summary - Data Structures (Jan 25, 2025)</h3>
-                        <button class="close-btn" onclick="hideLectureSummary()">✕</button>
-                    </div>
-
-                    <div class="result-section">
-                        <div class="section-icon">📝</div>
-                        <h4>Lecture Summary</h4>
-                        <p>
-                            Today's Data Structures lecture covered <strong>Binary Search Trees (BST)</strong>.
-                            Key topics included:
-                        </p>
-                        <ul>
-                            <li>BST properties: left child < parent < right child</li>
-                            <li>Insertion algorithms (recursive and iterative approaches)</li>
-                            <li>Time complexity analysis: O(log n) for balanced trees</li>
-                            <li>Practical demonstrations of tree traversal methods</li>
-                        </ul>
-                    </div>
-
-                    <div class="result-section">
-                        <div class="section-icon">📌</div>
-                        <h4>Suggested Revision Topic</h4>
-                        <p>
-                            Review <strong>AVL Trees and self-balancing mechanisms</strong> to build upon today's BST
-                            foundation.
-                            Understanding rotation operations will help you grasp advanced tree structures.
-                        </p>
-                    </div>
-
-                    <div class="result-section">
-                        <div class="section-icon">✏️</div>
-                        <h4>Practice Task</h4>
-                        <p>
-                            <strong>Assignment:</strong> Implement a BST insertion function in your preferred
-                            programming language.
-                            Include proper error handling and test with at least 5 different inputs.
-                        </p>
-                        <p class="deadline-info">
-                            Submit via the course portal by next lecture (Jan 27, 2025)
-                        </p>
-                    </div>
-
-                    <button class="btn btn-secondary" onclick="hideLectureSummary()">Back to Portal</button>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -164,27 +134,38 @@
         <div class="container">
             <h2 class="section-title">Quick Access Resources</h2>
             <div class="resources-grid">
-                <div class="resource-card">
+                <div class="resource-card disabled-feature">
                     <div class="resource-icon">📚</div>
                     <h3>Course Materials</h3>
                     <p>Access all faculty-verified lecture notes and resources</p>
+                    <div class="planned-feature-label">Planned Feature (Demo Preview)</div>
                 </div>
-                <div class="resource-card">
+                <div class="resource-card disabled-feature">
                     <div class="resource-icon">📊</div>
                     <h3>Progress Tracker</h3>
                     <p>Monitor your learning progress across all subjects</p>
+                    <div class="planned-feature-label">Planned Feature (Demo Preview)</div>
                 </div>
-                <div class="resource-card">
+                <div class="resource-card disabled-feature">
                     <div class="resource-icon">💬</div>
                     <h3>Query History</h3>
                     <p>Review your previous questions and answers</p>
+                    <div class="planned-feature-label">Planned Feature (Demo Preview)</div>
                 </div>
-                <div class="resource-card">
+                <div class="resource-card disabled-feature">
                     <div class="resource-icon">🎯</div>
                     <h3>Practice Tests</h3>
                     <p>Test your knowledge with curriculum-aligned quizzes</p>
+                    <div class="planned-feature-label">Planned Feature (Demo Preview)</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Student Authentication Note -->
+    <section class="auth-note-section">
+        <div class="container">
+            <p class="auth-note">Student authentication will be enforced in production using institutional credentials.</p>
         </div>
     </section>
 
@@ -200,7 +181,7 @@
                     <a href="index.html">Home</a>
                     <a href="faculty.html">Faculty Portal</a>
                     <a href="student.html">Student Portal</a>
-                    <a href="architecture.html">System Flow</a>
+                    <a href="architecture.html">Architecture</a>
                     <a href="about.html">About</a>
                 </div>
                 <div class="footer-info">

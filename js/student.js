@@ -198,40 +198,55 @@ function findAnswer(query) {
     };
 }
 
-// Show lecture summary (Learning Continuity)
+// Show lecture summary (Learning Continuity) - Updated for demo safety
 function showLectureSummary() {
-    const container = document.getElementById('continuityCardContainer');
-    const result = document.getElementById('continuityResult');
-
-    container.style.opacity = '0';
-    setTimeout(() => {
-        container.style.display = 'none';
-        result.style.display = 'block';
-        result.style.opacity = '0';
-
-        setTimeout(() => {
-            result.style.transition = 'opacity 0.5s ease';
-            result.style.opacity = '1';
-        }, 100);
-    }, 300);
+    // Create and show modal with demo data
+    const modal = document.createElement('div');
+    modal.className = 'demo-modal-overlay';
+    modal.innerHTML = `
+        <div class="demo-modal">
+            <div class="demo-modal-header">
+                <h3>Learning Continuity Preview</h3>
+                <button class="demo-modal-close" onclick="closeDemoModal()">&times;</button>
+            </div>
+            <div class="demo-modal-content">
+                <h4>Sample Lecture Summary - Data Structures (Jan 25, 2025)</h4>
+                <p><strong>Key Topics Covered:</strong></p>
+                <ul>
+                    <li>Binary Search Trees (BST) properties</li>
+                    <li>Insertion algorithms (recursive and iterative)</li>
+                    <li>Time complexity analysis: O(log n) for balanced trees</li>
+                    <li>Tree traversal methods demonstration</li>
+                </ul>
+                <p><strong>Suggested Next Steps:</strong></p>
+                <ul>
+                    <li>Review AVL Trees and self-balancing mechanisms</li>
+                    <li>Practice BST insertion function implementation</li>
+                    <li>Complete assignment by next lecture (Jan 27, 2025)</li>
+                </ul>
+                <div class="demo-note">
+                    <p><strong>Note:</strong> This is illustrative preview data. In production, summaries would be generated from actual lecture content.</p>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Add click outside to close
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeDemoModal();
+        }
+    });
 }
 
-// Hide lecture summary
-function hideLectureSummary() {
-    const container = document.getElementById('continuityCardContainer');
-    const result = document.getElementById('continuityResult');
-
-    result.style.opacity = '0';
-    setTimeout(() => {
-        result.style.display = 'none';
-        container.style.display = 'block';
-        container.style.opacity = '0';
-
-        setTimeout(() => {
-            container.style.transition = 'opacity 0.5s ease';
-            container.style.opacity = '1';
-        }, 100);
-    }, 300);
+// Close demo modal
+function closeDemoModal() {
+    const modal = document.querySelector('.demo-modal-overlay');
+    if (modal) {
+        modal.remove();
+    }
 }
 
 // Scroll chat to bottom

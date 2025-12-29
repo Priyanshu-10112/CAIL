@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Architecture - CAIL</title>
+    <title>Architecture - CAIL</title>
     <meta name="description" content="Technical architecture and system flow of CAIL">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,13 @@
 </head>
 
 <body>
+    <!-- Demo Preview Label -->
+    <div class="demo-preview-banner">
+        <div class="container">
+            <p>Frontend MVP – Hackathon Prototype</p>
+        </div>
+    </div>
+
     <!-- Navigation Header -->
     <header class="main-header">
         <div class="container">
@@ -25,7 +32,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="faculty.html">Faculty Portal</a></li>
                     <li><a href="student.html">Student Portal</a></li>
-                    <li><a href="architecture.html" class="active">System Flow</a></li>
+                    <li><a href="architecture.html" class="active">Architecture</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
                 <div class="team-badge">Team: ZERO_IQ</div>
@@ -44,6 +51,9 @@
     <!-- System Flow Diagram -->
     <section class="flow-diagram-section">
         <div class="container">
+            <div class="mvp-disclosure">
+                <p><strong>Hackathon MVP:</strong> Backend AI and RAG pipeline are mocked for demonstration. Production deployment integrates Vertex AI and vector-based retrieval.</p>
+            </div>
             <h2 class="section-title">End-to-End System Flow</h2>
 
             <div class="flow-container">
@@ -232,7 +242,7 @@
                     </div>
 
                     <div class="demo-note-box">
-                        <h4>Demo Implementation</h4>
+                        <h4>Hackathon MVP Implementation</h4>
                         <p>
                             For this hackathon MVP, the RAG pipeline is mocked using predefined question-answer pairs.
                             In production, this would connect to Vertex AI and a vector database for real-time
@@ -317,7 +327,7 @@
                     <a href="index.html">Home</a>
                     <a href="faculty.html">Faculty Portal</a>
                     <a href="student.html">Student Portal</a>
-                    <a href="architecture.html">System Flow</a>
+                    <a href="architecture.html">Architecture</a>
                     <a href="about.html">About</a>
                 </div>
                 <div class="footer-info">

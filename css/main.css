@@ -47,6 +47,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Demo Preview Banner */
+.demo-preview-banner {
+    background: #fff3cd;
+    border-bottom: 1px solid #ffeaa7;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #856404;
+    font-weight: 500;
+}
+
+.demo-preview-banner p {
+    margin: 0;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -199,6 +214,20 @@ body {
     color: var(--text-secondary);
     margin-bottom: 16px;
     font-weight: 400;
+}
+
+.hero-clarification {
+    font-size: 16px;
+    color: var(--primary-blue);
+    font-weight: 500;
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #e3f2fd;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-blue);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-description {
@@ -2011,4 +2040,231 @@ body {
     .tech-stack-grid {
         grid-template-columns: 1fr;
     }
+}
+/* Faculty Portal Demo Notes */
+.upload-demo-note {
+    font-size: 14px;
+    color: #856404;
+    background: #fff3cd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ffeaa7;
+}
+
+.demo-table-note {
+    font-size: 14px;
+    color: #856404;
+    background: #fff3cd;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    text-align: center;
+    border: 1px solid #ffeaa7;
+}
+
+.logout-btn {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+/* Student Portal Sample Response */
+.sample-response-section {
+    margin-top: 32px;
+    padding: 24px;
+    background: var(--bg-gray-light);
+    border-radius: 8px;
+    border: 1px solid var(--border-gray);
+}
+
+.sample-response-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.sample-response-card {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+}
+
+.sample-response-card p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.source-attribution {
+    font-size: 14px;
+    color: var(--success-green);
+    font-weight: 500;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Disabled Features */
+.disabled-feature {
+    opacity: 0.6;
+    pointer-events: none;
+    position: relative;
+}
+
+.planned-feature-label {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff3cd;
+    color: #856404;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ffeaa7;
+    font-weight: 500;
+}
+
+/* Student Authentication Note */
+.auth-note-section {
+    background: var(--bg-gray-light);
+    padding: 20px 0;
+    border-top: 1px solid var(--border-gray);
+}
+
+.auth-note {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Architecture MVP Disclaimer */
+.hackathon-mvp-disclaimer {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.hackathon-mvp-disclaimer p {
+    margin: 0;
+    color: #856404;
+    font-weight: 500;
+}
+/* Demo Modal Styles */
+.demo-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.demo-modal {
+    background: white;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.demo-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-gray);
+    background: var(--bg-gray-light);
+    border-radius: 8px 8px 0 0;
+}
+
+.demo-modal-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.demo-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.demo-modal-close:hover {
+    background: var(--border-gray);
+    color: var(--text-primary);
+}
+
+.demo-modal-content {
+    padding: 24px;
+}
+
+.demo-modal-content h4 {
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.demo-modal-content ul {
+    margin: 12px 0 20px 20px;
+}
+
+.demo-modal-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.demo-note {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+.demo-note p {
+    margin: 0;
+    color: #856404;
+    font-size: 14px;
+    font-weight: 500;
+}
+/* MVP Disclosure for Architecture Page */
+.mvp-disclosure {
+    background: #e3f2fd;
+    border: 1px solid #1976d2;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.mvp-disclosure p {
+    margin: 0;
+    color: #1565c0;
+    font-weight: 500;
+    font-size: 15px;
 }
